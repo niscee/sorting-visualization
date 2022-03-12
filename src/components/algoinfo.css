@@ -1,0 +1,38 @@
+.algoContainer {
+  width: 65%;
+  margin: 40px auto;
+  color: white;
+}
+
+#algotitle {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.algoInner {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 40% 20% 40%;
+  line-height: 1.6;
+}
+
+.verticalBar {
+  height: 100%;
+  border: 1px solid white;
+  width: 0;
+  margin: auto;
+}
+
+#algoNotification {
+  text-align: center;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .algoContainer {
+    width: 100%;
+  }
+}

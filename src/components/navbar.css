@@ -1,0 +1,76 @@
+.navbar {
+  margin-top: 0;
+  margin-bottom: 20px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+#appName {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--secondary);
+}
+
+#appName::first-letter {
+  color: var(--optional);
+  font-size: 30px;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.algo-list {
+  background-color: var(--main);
+  border: none;
+  color: var(--secondary);
+  padding: 20px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.algo-list:focus {
+  outline: none;
+}
+
+#randombar {
+  font-size: 14px;
+  padding: 5px;
+  height: 30px;
+  background-color: var(--optional);
+  color: white;
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 768px) {
+  .algo-list {
+    font-size: 10px;
+  }
+
+  .navbar {
+    padding: 5px;
+  }
+
+  #randombar {
+    font-size: 10px;
+    padding: 2px;
+  }
+
+  #appName {
+    font-size: 14px;
+  }
+
+  #appName::first-letter {
+    color: var(--optional);
+    font-size: 15px;
+  }
+}
