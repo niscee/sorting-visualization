@@ -14,8 +14,11 @@ const AlgoInfo = ({ currentAlgo }) => {
               <p id="algotitle" style={{ marginBottom: "10px" }}>
                 Performance:
               </p>
-              <p>Worst-case time complexity &nbsp; {currentAlgo.worstCase}</p>
-              <p>Worst-case time complexity &nbsp; {currentAlgo.bestCase}</p>
+              <p>Worst-case Time Complexity &nbsp; {currentAlgo.worstCase}</p>
+              <p>Best-case Time Complexity &nbsp; {currentAlgo.bestCase}</p>
+              <p>
+                Worst-case Space Complexity &nbsp; {currentAlgo.spaceComplexity}
+              </p>
             </div>
           </div>
         </>

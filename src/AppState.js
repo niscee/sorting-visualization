@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 
 const AppState = () => {
-  const [bars, setBars] = useState(15);
+  const [bars, setBars] = useState(12);
   const [array, setArray] = useState([]);
   const [arraySwap, setArraySwap] = useState([]);
+  const [arrayCompare, setArrayCompare] = useState([]);
   const [currentAlgo, setCurrentAlgo] = useState("");
+  const [disableButton, setDisableButton] = useState(false);
 
   // generate radnom number.
   const generateNumber = (min, max) => {
@@ -36,6 +38,10 @@ const AppState = () => {
     setArraySwap,
     currentAlgo,
     setCurrentAlgo,
+    arrayCompare,
+    setArrayCompare,
+    disableButton,
+    setDisableButton,
   ];
 };
 

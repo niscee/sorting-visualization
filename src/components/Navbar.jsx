@@ -2,7 +2,7 @@ import React from "react";
 import "./navbar.css";
 import AlgoData from "../utils/AlgoData";
 
-const Navbar = ({ renderBars, setCurrentAlgo }) => {
+const Navbar = ({ renderBars, setCurrentAlgo, disableButton }) => {
   // get select value.
   const changeHandler = (id) => {
     const data = AlgoData.filter((algo) => {
@@ -17,6 +17,7 @@ const Navbar = ({ renderBars, setCurrentAlgo }) => {
       <div className="navbar-right">
         <button
           id="randombar"
+          disabled={disableButton}
           onClick={() => {
             renderBars();
           }}
@@ -26,13 +27,14 @@ const Navbar = ({ renderBars, setCurrentAlgo }) => {
         <div>
           <select
             className="algo-list"
+            disabled={disableButton}
             onChange={(e) => {
               changeHandler(e.target.value);
             }}
           >
             <option value="0">Select Algorithm</option>
             <option value="1">Bubble Sort</option>
-            <option value="2">BMW</option>
+            <option value="2">Insertion Sort</option>
             <option value="3">Citroen</option>
             <option value="4">Ford</option>
           </select>

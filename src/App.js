@@ -17,22 +17,40 @@ const App = () => {
     setArraySwap,
     currentAlgo,
     setCurrentAlgo,
+    arrayCompare,
+    setArrayCompare,
+    disableButton,
+    setDisableButton,
   ] = AppState();
 
   useEffect(() => {
     renderBars();
-  }, []);
+  }, [currentAlgo]);
 
   return (
     <div className="mainContainer">
-      <Navbar renderBars={renderBars} setCurrentAlgo={setCurrentAlgo} />
+      <Navbar
+        renderBars={renderBars}
+        setCurrentAlgo={setCurrentAlgo}
+        disableButton={disableButton}
+      />
       <div className="innerContainer">
-        <Bars bars={bars} array={array} arraySwap={arraySwap} />
+        <Bars
+          bars={bars}
+          array={array}
+          arraySwap={arraySwap}
+          arrayCompare={arrayCompare}
+          setArrayCompare={setArrayCompare}
+        />
         <Button
           array={array}
           setArraySwap={setArraySwap}
           setArray={setArray}
           currentAlgo={currentAlgo}
+          arrayCompare={arrayCompare}
+          setArrayCompare={setArrayCompare}
+          disableButton={disableButton}
+          setDisableButton={setDisableButton}
         />
         <AlgoInfo currentAlgo={currentAlgo} />
       </div>
