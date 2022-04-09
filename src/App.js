@@ -21,6 +21,8 @@ const App = () => {
     setArrayCompare,
     disableButton,
     setDisableButton,
+    keyVal,
+    setKeyVal,
   ] = AppState();
 
   useEffect(() => {
@@ -32,6 +34,7 @@ const App = () => {
       <Navbar
         renderBars={renderBars}
         setCurrentAlgo={setCurrentAlgo}
+        setBars={setBars}
         disableButton={disableButton}
       />
       <div className="innerContainer">
@@ -41,8 +44,11 @@ const App = () => {
           arraySwap={arraySwap}
           arrayCompare={arrayCompare}
           setArrayCompare={setArrayCompare}
+          keyVal={keyVal}
+          setKeyVal={setKeyVal}
         />
         <Button
+          bars={bars}
           array={array}
           setArraySwap={setArraySwap}
           setArray={setArray}
@@ -51,6 +57,8 @@ const App = () => {
           setArrayCompare={setArrayCompare}
           disableButton={disableButton}
           setDisableButton={setDisableButton}
+          keyVal={keyVal}
+          setKeyVal={setKeyVal}
         />
         <AlgoInfo currentAlgo={currentAlgo} />
       </div>

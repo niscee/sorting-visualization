@@ -13,9 +13,11 @@
 }
 
 #appName {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
   color: var(--secondary);
+  cursor: pointer;
+  letter-spacing: 1.5px;
 }
 
 #appName::first-letter {
@@ -36,6 +38,7 @@
   padding: 20px;
   font-size: 15px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .algo-list:focus {
@@ -44,11 +47,10 @@
 
 #randombar {
   font-size: 14px;
-  padding: 5px;
-  height: 30px;
+  padding: 8px;
+  /* height: 30px; */
   background-color: var(--optional);
   color: white;
-  border-radius: 4px;
 }
 
 @media screen and (max-width: 768px) {
@@ -72,5 +74,9 @@
   #appName::first-letter {
     color: var(--optional);
     font-size: 15px;
+  }
+
+  #appName{
+    letter-spacing: 0;
   }
 }

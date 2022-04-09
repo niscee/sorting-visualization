@@ -1,5 +1,7 @@
 import React from "react";
 
+const color = ["#66bb6a", "red"];
+
 const BubbleSort = (
   array,
   setArray,
@@ -7,9 +9,24 @@ const BubbleSort = (
   arrayCompare,
   setArrayCompare,
   disableButton,
-  setDisableButton
+  setDisableButton,
+  bars
 ) => {
+  let startTime = 3400;
+  let endTime = 29000;
+  let innerStartTime = 100;
+  let innerIntervalTime = 400;
+
+  if (bars == 20) {
+    endTime = 55000;
+    startTime = 3000;
+    innerStartTime = 50;
+    innerIntervalTime = 100;
+  }
+
+  // prevent other button to work.
   setDisableButton(true);
+
   const arrLen = array.length;
   const temp = array;
 
@@ -21,32 +38,28 @@ const BubbleSort = (
           currentBars.push(j);
           currentBars.push(j + 1);
           setArrayCompare(currentBars);
+          setArraySwap(color[0]);
 
-          if (temp[j] > temp[j + 1]) {
-            setArrayCompare([]);
-
-            setTimeout(() => {
+          setTimeout(() => {
+            if (temp[j] > temp[j + 1]) {
               const newTemp = temp[j];
               temp[j] = temp[j + 1];
               temp[j + 1] = newTemp;
 
-              let currentCompareBars = [];
-              currentCompareBars.push(j);
-              currentCompareBars.push(j + 1);
-              setArraySwap(currentCompareBars);
-            }, 500);
-          }
-
-          setArray(temp);
-        }, j * 100);
+              setArraySwap(color[1]);
+            }
+            setArray(temp);
+          }, innerStartTime);
+        }, j * innerIntervalTime);
       }
-    }, i * 2000);
+    }, i * startTime);
   }
 
   setTimeout(() => {
     setArrayCompare([]);
     setDisableButton(false);
-  }, 22000);
+    console.log("done");
+  }, endTime);
 };
 
 export default BubbleSort;

@@ -3,11 +3,27 @@
   margin: 10px auto;
   text-align: center;
   border-bottom: 1px solid white;
-  padding: 20px;
+  padding: 20px 10px;
 }
 
 .btnStyle {
   font-size: 40px;
+  border-radius: 20%;
+}
+
+.colordefine {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  width: 100%;
+}
+
+.colordefine > div {
+  margin: 5px;
 }
 
 @media screen and (max-width: 768px) {
@@ -17,5 +33,13 @@
 
   .buttonContainer {
     width: 100%;
+  }
+
+  .colordefine{
+    font-size: 0.8rem;
+  }
+
+  .colordefine > div {
+    margin: 5px;
   }
 }

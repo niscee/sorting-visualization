@@ -1,67 +1,9 @@
 import React from "react";
-import BubbleSort from "../utils/BubbleSort";
-import InsertionSort from "../utils/InsertionSort";
 import "./button.css";
-
-// filter algorithm based on algo_id.
-const filterAlgo = (
-  id,
-  array,
-  setArray,
-  setArraySwap,
-  arrayCompare,
-  setArrayCompare,
-  disableButton,
-  setDisableButton
-) => {
-  if (id === 1) {
-    return (
-      <button
-        disabled={disableButton}
-        onClick={() =>
-          BubbleSort(
-            array,
-            setArray,
-            setArraySwap,
-            arrayCompare,
-            setArrayCompare,
-            disableButton,
-            setDisableButton
-          )
-        }
-        className="btnStyle"
-        title="play visualizer"
-      >
-        ▶️
-      </button>
-    );
-  }
-
-  if (id === 2) {
-    return (
-      <button
-        onClick={() =>
-          InsertionSort(
-            array,
-            setArray,
-            setArraySwap,
-            arrayCompare,
-            setArrayCompare,
-            disableButton,
-            setDisableButton
-          )
-        }
-        className="btnStyle"
-        title="play visualizer"
-        disabled={disableButton}
-      >
-        ▶️
-      </button>
-    );
-  }
-};
+import FilterAlgo from "./FilterAlgo";
 
 const Button = ({
+  bars,
   array,
   setArray,
   setArraySwap,
@@ -70,20 +12,27 @@ const Button = ({
   setArrayCompare,
   disableButton,
   setDisableButton,
+  keyVal,
+  setKeyVal,
 }) => {
   return (
     <div className="buttonContainer">
-      {currentAlgo &&
-        filterAlgo(
-          currentAlgo.id,
-          array,
-          setArray,
-          setArraySwap,
-          arrayCompare,
-          setArrayCompare,
-          disableButton,
-          setDisableButton
-        )}
+      {/* get id and return selected id algorithm, details */}
+      {currentAlgo && (
+        <FilterAlgo
+          id={currentAlgo.id}
+          array={array}
+          setArray={setArray}
+          setArraySwap={setArraySwap}
+          arrayCompare={arrayCompare}
+          setArrayCompare={setArrayCompare}
+          disableButton={disableButton}
+          setDisableButton={setDisableButton}
+          bars={bars}
+          keyVal={keyVal}
+          setKeyVal={setKeyVal}
+        />
+      )}
     </div>
   );
 };

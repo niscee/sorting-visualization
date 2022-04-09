@@ -1,19 +1,19 @@
 .algoContainer {
-  width: 65%;
+  width: 70%;
   margin: 40px auto;
   color: white;
+  letter-spacing: 2px;
 }
 
 #algotitle {
   font-size: 20px;
   font-weight: bold;
-  letter-spacing: 2px;
 }
 
 .algoInner {
   margin-top: 20px;
   display: grid;
-  grid-template-columns: 50% 10% 40%;
+  grid-template-columns: 65% 10% 25%;
   line-height: 1.6;
 }
 
@@ -34,5 +34,14 @@
 @media screen and (max-width: 768px) {
   .algoContainer {
     width: 100%;
+  }
+  .algoInner {
+    display: block;
+  }
+  .verticalBar {
+    display: none;
+  }
+  #algotitle {
+    margin-top: 20px;
   }
 }

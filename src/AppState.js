@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 
 const AppState = () => {
-  const [bars, setBars] = useState(12);
+  const [bars, setBars] = useState(10);
   const [array, setArray] = useState([]);
-  const [arraySwap, setArraySwap] = useState([]);
+  const [keyVal, setKeyVal] = useState(-1);
+  const [arraySwap, setArraySwap] = useState("#98ee99");
   const [arrayCompare, setArrayCompare] = useState([]);
   const [currentAlgo, setCurrentAlgo] = useState("");
   const [disableButton, setDisableButton] = useState(false);
@@ -25,8 +26,15 @@ const AppState = () => {
         tempBar.push(generateNumber(3, 32));
       }
     }
-    setArray([...tempBar]);
+    setTimeout(() => {
+      setArray([]);
+      setArray([...tempBar]);
+    }, 1);
   };
+
+  useEffect(() => {
+    renderBars();
+  }, [bars]);
 
   return [
     bars,
@@ -42,6 +50,8 @@ const AppState = () => {
     setArrayCompare,
     disableButton,
     setDisableButton,
+    keyVal,
+    setKeyVal,
   ];
 };
 
