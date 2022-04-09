@@ -2,18 +2,20 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
+  font-weight: bold;
 }
 
 :root {
-  --main: #3a3a3c;
-  --primary: #3a3a3c;
-  --secondary: white;
-  --optional: #66bb6a;
+  --main: lightblue;
+  --primary: lightblue;
+  --secondary: #3a3a3c;
+  --optional: green;
   --test: blue;
 }
 
 .mainContainer {
-  background-color: var(--main);
+  background-color: var(--primary);
   height: 100vh;
   overflow: auto;
 }

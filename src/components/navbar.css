@@ -1,15 +1,18 @@
 .navbar {
+  margin: auto;
   margin-top: 0;
   margin-bottom: 20px;
-  height: 80px;
+  height: 90px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
-  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 10px;
   position: sticky;
   top: 0;
   z-index: 1;
+  background-color: var(--primary);
+  border-bottom: 5px solid white;
+  width: 95%;
 }
 
 #appName {
@@ -32,7 +35,7 @@
 }
 
 .algo-list {
-  background-color: var(--main);
+  background-color: var(--primary);
   border: none;
   color: var(--secondary);
   padding: 20px;
@@ -48,7 +51,7 @@
 #randombar {
   font-size: 14px;
   padding: 8px;
-  /* height: 30px; */
+  border: none;
   background-color: var(--optional);
   color: white;
 }
@@ -60,11 +63,11 @@
 
   .navbar {
     padding: 5px;
+    width: 100%;
   }
 
   #randombar {
-    font-size: 10px;
-    padding: 2px;
+    display: none;
   }
 
   #appName {
@@ -76,7 +79,7 @@
     font-size: 15px;
   }
 
-  #appName{
-    letter-spacing: 0;
+  #appName {
+    letter-spacing: 1px;
   }
 }

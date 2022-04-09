@@ -5,7 +5,7 @@ const ColorDefine = () => {
     <div className="colordefine">
       <div>🟢 Comparing</div>
       <div>🔴 Swapped</div>
-      <div>🔵 Key Value</div>
+      <div>🟡 Key Value</div>
     </div>
   );
 };

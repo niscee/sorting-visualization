@@ -16,7 +16,7 @@ const AllBar = ({ arr, key, arraySwap, arrayCompare, keyVal }) => {
         position: "relative",
         width: window.innerWidth > 768 ? "100%" : "3%",
         margin: window.innerWidth > 768 && "0 5px",
-        border: keyVal == key ? "6px solid lime" : "inherit",
+        border: keyVal == key ? "6px solid lime" : "lightblue",
         // width: "8%",
       }}
     >

@@ -1,7 +1,7 @@
 .algoContainer {
   width: 70%;
   margin: 40px auto;
-  color: white;
+  color: var(--secondary);
   letter-spacing: 2px;
 }
 
@@ -27,7 +27,7 @@
 #algoNotification {
   text-align: center;
   font-size: 20px;
-  color: white;
+  color: var(--secondary);
   font-weight: bold;
 }
 

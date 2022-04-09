@@ -16,7 +16,7 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 15px;
-  color: white;
+  color: var(--secondary);
   font-weight: bold;
   letter-spacing: 1.2px;
   width: 100%;

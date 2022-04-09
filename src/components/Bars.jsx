@@ -4,12 +4,17 @@ import { motion } from "framer-motion";
 
 const Bars = ({ bars, array, arraySwap, arrayCompare, keyVal }) => {
   return (
-    <div className="barContainer">
+    <motion.div
+      className="barContainer"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
       {array.map((arr, key) => {
         return arrayCompare[0] === key || arrayCompare[1] === key ? (
           <motion.div
             initial={{ scale: 1 }}
-            animate={{ scale: 1.06 }}
+            animate={{ scale: 1.03 }}
             transition={{ duration: 0.2 }}
             className="bar"
             key={key}
@@ -20,7 +25,7 @@ const Bars = ({ bars, array, arraySwap, arrayCompare, keyVal }) => {
               position: "relative",
               width: window.innerWidth > 768 ? "100%" : "3%",
               margin: window.innerWidth > 768 && "0 5px",
-              border: keyVal == key ? "6px solid blue" : "1px solid black",
+              border: keyVal == key ? "6px solid yellow" : "lightblue",
               // width: "8%",
             }}
           >
@@ -50,7 +55,7 @@ const Bars = ({ bars, array, arraySwap, arrayCompare, keyVal }) => {
               position: "relative",
               width: window.innerWidth > 768 ? "100%" : "3%",
               margin: window.innerWidth > 768 && "0 5px",
-              border: keyVal == key ? "6px solid blue" : "1px solid black",
+              border: keyVal == key ? "6px solid yellow" : "1px solid lightblue",
               // width: "8%",
             }}
           >
@@ -68,7 +73,7 @@ const Bars = ({ bars, array, arraySwap, arrayCompare, keyVal }) => {
           </motion.div>
         );
       })}
-    </div>
+    </motion.div>
   );
 };
 

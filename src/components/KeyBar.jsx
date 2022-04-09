@@ -16,7 +16,7 @@ const KeyBar = ({ arr, id, arraySwap, arrayCompare, keyVal }) => {
         position: "relative",
         width: window.innerWidth > 768 ? "100%" : "3%",
         margin: window.innerWidth > 768 && "0 5px",
-        border: keyVal == id ? "6px solid lime" : "1px solid #3a3a3c",
+        border: keyVal == id ? "6px solid lime" : "1px solid lightblue",
       }}
     >
       {window.innerWidth > 768 && (
