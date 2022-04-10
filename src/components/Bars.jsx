@@ -25,7 +25,7 @@ const Bars = ({ bars, array, arraySwap, arrayCompare, keyVal }) => {
               position: "relative",
               width: window.innerWidth > 768 ? "100%" : "3%",
               margin: window.innerWidth > 768 && "0 5px",
-              border: keyVal == key ? "6px solid yellow" : "lightblue",
+              border: keyVal == key ? "6px solid yellow" : "2px solid #3a3a3c",
               // width: "8%",
             }}
           >
@@ -55,7 +55,8 @@ const Bars = ({ bars, array, arraySwap, arrayCompare, keyVal }) => {
               position: "relative",
               width: window.innerWidth > 768 ? "100%" : "3%",
               margin: window.innerWidth > 768 && "0 5px",
-              border: keyVal == key ? "6px solid yellow" : "1px solid lightblue",
+              border: keyVal == key ? "6px solid yellow" : "2px solid #3a3a3c",
+
               // width: "8%",
             }}
           >

@@ -9,7 +9,7 @@ const AlgoInfo = ({ currentAlgo }) => {
         <motion.div
           initial={{ scale: 1.5 }}
           animate={{ scale: 1 }}
-          transition={{ duration: 1, type: "spring", stiffness: 300 }}
+          transition={{ duration: 1, type: "spring", stiffness: 500 }}
         >
           <p id="algotitle">{currentAlgo && currentAlgo.name}</p>
           <div className="algoInner">

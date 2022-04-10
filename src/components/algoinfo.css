@@ -3,6 +3,7 @@
   margin: 40px auto;
   color: var(--secondary);
   letter-spacing: 2px;
+  user-select: none;
 }
 
 #algotitle {
@@ -15,6 +16,7 @@
   display: grid;
   grid-template-columns: 65% 10% 25%;
   line-height: 1.6;
+ 
 }
 
 .verticalBar {

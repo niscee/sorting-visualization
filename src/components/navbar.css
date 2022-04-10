@@ -1,7 +1,7 @@
 .navbar {
   margin: auto;
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   height: 90px;
   display: flex;
   align-items: center;
@@ -25,7 +25,7 @@
 
 #appName::first-letter {
   color: var(--optional);
-  font-size: 30px;
+  font-size: 35px;
 }
 
 .navbar-right {
@@ -52,8 +52,9 @@
   font-size: 14px;
   padding: 8px;
   border: none;
-  background-color: var(--optional);
+  background-color: var(--secondary);
   color: white;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
@@ -76,7 +77,8 @@
 
   #appName::first-letter {
     color: var(--optional);
-    font-size: 15px;
+    font-size: 20px;
+    font-weight: bold;
   }
 
   #appName {
